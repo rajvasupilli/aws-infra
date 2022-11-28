@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    triggers {
+        cron('15 8 * * *')
+        }
 
     stages {
         stage('Terraform init') {
