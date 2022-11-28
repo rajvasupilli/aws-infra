@@ -8,7 +8,7 @@ resource "aws_subnet" "main" {
   cidr_block = element(var.subnet_cidr,count.index)
 
   tags = {
-    Name = "subnet-[count.index]"
+    Name = "subnet-${count.index}"
   }
  depends_on = ["aws_vpc.main"]
 }
