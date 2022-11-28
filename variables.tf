@@ -8,4 +8,4 @@ variable subnet_cidr {
   type = list
   description = "The cidr blocks pertaining to the subnets"
   default = ["10.0.1.0/24", "10.0.3.0/24"]
-{
+}
