@@ -4,12 +4,16 @@ pipeline {
     stages {
         stage('Terraform init') {
             steps {
-                terraform init
+                sh '''
+                  terraform init
+                  '''
             }
         }
          stage('Terraform Apply') {
             steps {
-                terraform apply --auto-approve
+                sh '''
+                   terraform apply --auto-approve
+                '''
             }
         }
     }
