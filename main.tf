@@ -10,4 +10,5 @@ resource "aws_subnet" "main" {
   tags = {
     Name = "subnet-[count.index]"
   }
+ depends_on = ["aws_vpc.main"]
 }
